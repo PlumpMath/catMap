@@ -1,18 +1,11 @@
 /! application
 .container
-  nav.navbar.navbar-default
-    .navbar-header
-      linkTo "index" class="navbar-brand" | Hampsters
-    .collapse.navbar-collapse
-      ul.nav.navbar-nav
-        linkTo "index" tagName="li"
-          a href="{{view.href}}"
-            | Home
-        linkTo "about" tagName="li"
-          a href="{{view.href}}"
-            | About
-
-  p.alert
-    | Main application template Find me in <code>app/templates/application.emblem</code>
+  header.main-header
+    a.logo
+    ul.main-nav
+      li.main-nav-li
+        a.main-nav-a href="/about" About
+      li.main-nav-li
+        a.main-nav-a href="/contact" Contact
 
   #page= outlet
