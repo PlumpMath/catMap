@@ -23,7 +23,6 @@ exports.config =
           'vendor/scripts/handlebars.js'
           'vendor/scripts/ember-latest.js'
           'vendor/scripts/ember-data-latest.js'
-          'vendor/scripts/bootstrap.js'
         ]
 
     stylesheets:
