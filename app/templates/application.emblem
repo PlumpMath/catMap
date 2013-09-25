@@ -1,7 +1,7 @@
 /! application
 .container
   header.main-header
-    a.logo
+    a.logo href="/" CATMAP
     ul.main-nav
       li.main-nav-li
         a.main-nav-a href="/about" About

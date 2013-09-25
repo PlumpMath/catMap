@@ -32,7 +32,7 @@ require 'views/index'
 #// Routes
 #/////////////////////////////////
 
-
+require 'routes/application'
 
 #/////////////////////////////////
 #// Store
@@ -51,4 +51,3 @@ App.Router.reopen(
 
 App.Router.map ->
   @route "about", path: "/about"
-  @route "index", path: "/"
