@@ -5,11 +5,10 @@ passport = require 'passport'
 mongoose = require 'mongoose'
 MongoStore = require('connect-mongo')(express)
 routes = require './routes'
-Beta = require './models/beta'
 User = require './models/user'
 
 app = module.exports = express()
-mongoose.connect 'mongodb://localhost/ark', (err) ->
+mongoose.connect 'mongodb://localhost/catmap', (err) ->
   if err
     console.log err
   else
@@ -42,7 +41,7 @@ app.configure 'development', ->
 app.configure 'production', ->
   app.use express.errorHandler()
 
-passport.use new LocalStrategy(User.authenticate())
+passport.use User.createStrategy()
 passport.serializeUser (user, cb) ->
   cb null, user.email
 passport.deserializeUser (email, cb) ->

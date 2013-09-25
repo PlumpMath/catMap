@@ -49,3 +49,9 @@ exports.config =
   conventions:
     ignored: -> false
 
+  server:
+    path: './server/server.coffee'
+    debug: 'brunch:server'
+    persistent: true
+    base: './server'
+
