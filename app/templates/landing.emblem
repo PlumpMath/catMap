@@ -6,4 +6,4 @@ h1 bored with life?
 
 h1 
   | come see 
-  a href="/" catmap
+  linkTo "index" | catmap
