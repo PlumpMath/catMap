@@ -11,6 +11,7 @@ require 'templates/_well'
 require 'templates/login'
 require 'templates/register'
 require 'templates/contact'
+require 'templates/landing'
 
 
 #//////////////////////////////////
@@ -57,3 +58,4 @@ App.Router.map ->
   @route 'contact', path: '/contact'
   @route 'login', path: '/login'
   @route 'register', path: '/register'
+  @route 'landing', path: '/landing'
