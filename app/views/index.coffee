@@ -5,7 +5,7 @@ module.exports = App.IndexView = Em.View.extend
 
   didInsertElement: ->
     mapHeight = ->
-      $('#map').height($(window).height() - 50)
+      $('#map').height($(window).height() - 30)
 
     $(window).resize ->
       mapHeight()
