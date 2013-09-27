@@ -5,8 +5,6 @@ global-reset()
 .cf
   clearfix()
 
-@import '_colors'
-
 body, html
   margin: 0
   padding: 0
@@ -15,6 +13,8 @@ body, html
   min-height: 100%
   min-width: 100%
 
-// page-specific styling
-@import '_header'
-@import '_index'
+a
+  text-decoration: none
+
+  &:hover
+    text-decoration: none

@@ -4,6 +4,14 @@ module.exports = App.IndexView = Em.View.extend
   templateName: 'index'
 
   didInsertElement: ->
+    mapHeight = ->
+      $('#map').height($(window).height() - 50)
+
+    $(window).resize ->
+      mapHeight()
+
+    mapHeight()
+
     map = L.map('map').setView [51.505, -0.09], 13
 
     console.log 'hi'

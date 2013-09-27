@@ -7,5 +7,7 @@
         a.main-nav-a href="/about" About
       li.main-nav-li
         a.main-nav-a href="/contact" Contact
+      li.main-nav-li
+        a.main-nav-a href="/login" Login
 
   #page= outlet

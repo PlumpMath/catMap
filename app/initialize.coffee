@@ -8,6 +8,9 @@ require 'templates/application'
 require 'templates/index'
 require 'templates/about'
 require 'templates/_well'
+require 'templates/login'
+require 'templates/register'
+require 'templates/contact'
 
 
 #//////////////////////////////////
@@ -20,7 +23,7 @@ require 'templates/_well'
 #// Controllers
 #/////////////////////////////////
 
-
+require 'controllers/application'
 
 #/////////////////////////////////
 #// Views
@@ -51,3 +54,6 @@ App.Router.reopen(
 
 App.Router.map ->
   @route "about", path: "/about"
+  @route 'contact', path: '/contact'
+  @route 'login', path: '/login'
+  @route 'register', path: '/register'

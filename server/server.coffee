@@ -8,7 +8,7 @@ routes = require './routes'
 User = require './models/user'
 
 app = module.exports = express()
-mongoose.connect 'mongodb://localhost/catmap', (err) ->
+mongoose.connect 'mongodb://catman:catman@ds047438.mongolab.com:47438/catmap', (err) ->
   if err
     console.log err
   else
@@ -24,7 +24,7 @@ app.configure ->
   app.use express.methodOverride()
   app.use express.session {
     store: new MongoStore {
-      url: 'mongodb://localhost/catmap'
+      url: 'mongodb://catman:catman@ds047438.mongolab.com:47438/catmap'
     }
   }
   app.use passport.initialize()
