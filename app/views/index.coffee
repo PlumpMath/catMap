@@ -12,7 +12,7 @@ module.exports = App.IndexView = Em.View.extend
 
     mapHeight()
 
-    map = L.map('map').setView [51.505, -0.09], 13
+    map = L.map('map').setView [36.08, -115.1522], 10
 
     console.log 'hi'
 
@@ -22,6 +22,5 @@ module.exports = App.IndexView = Em.View.extend
       '/997/256/{z}/{x}/{y}.png',
       {
         attribution: 'Map data &copy; [..]'
-        maxZoom: 18
       },
     ).addTo map
