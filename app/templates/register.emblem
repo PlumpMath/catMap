@@ -1,4 +1,8 @@
 /!.register
-#page
+form
+  input type="text" name="name"
+  input type="password" pass="pass"
+  input type="password" confirmPass="pass"
+  input type="submit"
   linkTo "login" | Login
 
