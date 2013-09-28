@@ -1,0 +1,3 @@
+/ .login
+#page
+  linkTo "users.new" | Register instead?

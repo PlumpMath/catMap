@@ -1,8 +1,0 @@
-/!.register
-form
-  input type="text" placeholder="enter a username"
-  input type="password" placeholder="enter a password"
-  input type="password" placeholder="confirm your password"
-  button type="submit"
-  linkTo "login" | Login
-

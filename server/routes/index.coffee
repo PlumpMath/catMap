@@ -1,5 +1,3 @@
-User = require '../models/user'
-
 module.exports = (app) ->
   app.get '*', (req, res, next) ->
     if req.user
@@ -8,4 +6,5 @@ module.exports = (app) ->
       console.log 'NO USER!'
     next()
 
-
+  app.post '/api/users', (req, res) ->
+    console.log "new user: #{req.body.user.name}"

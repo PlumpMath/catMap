@@ -33,7 +33,7 @@ app.configure ->
   app.use express.static __dirname + '/../public/'
   app.use app.router
   app.use (req, res) ->
-    res.render 'layout'
+    res.render 'app/index'
 
 app.configure 'development', ->
   app.use express.errorHandler { dumpExceptions: true, showStack: true }
@@ -41,7 +41,7 @@ app.configure 'development', ->
 app.configure 'production', ->
   app.use express.errorHandler()
 
-passport.use User.createStrategy()
+passport.use new LocalStrategy(User.authenticate())
 passport.serializeUser (user, cb) ->
   cb null, user.email
 passport.deserializeUser (email, cb) ->

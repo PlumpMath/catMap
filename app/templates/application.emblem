@@ -8,6 +8,6 @@
       li.main-nav-li
         linkTo "contact" classNames="main-nav-a" | Contact
       li.main-nav-li
-        linkTo "login" classNames="main-nav-a" | Login
+        linkTo "sessions.new" classNames="main-nav-a" | Login
 
   #page= outlet

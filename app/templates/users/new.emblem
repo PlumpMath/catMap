@@ -1,0 +1,21 @@
+/!.register
+form submit="createUser"
+  label for="username" Username
+  = input id="username" type="text" placeholder="Enter username" valueBinding="username"
+
+  label for="password" Password
+  = input id="password" type="text" placeholder="Enter password" valueBinding="password"
+
+  label for="confirmPassword" Confirm password
+  = input id="confirmPassword" type="text" placeholder="Confirm password"
+
+  label for="name" Name
+  = input id="name" type="text" placeholder="Enter name" valueBinding="name"
+
+  label for="email" Email
+  = input id="email" type="text" placeholder="Enter email" valueBinding="email"
+
+  button type="submit" Submit
+
+  linkTo "sessions.new" | Login instead?
+
