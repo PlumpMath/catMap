@@ -1,28 +1,7 @@
 window.App = require 'app'
 
-#//////////////////////////////////
-#// Templates
-#//////////////////////////////////
-
-require 'templates/application'
-require 'templates/index'
-require 'templates/about'
-require 'templates/_well'
-require 'templates/contact'
-require 'templates/landing'
-
-require 'templates/sessions/new'
-require 'templates/sessions/destroy'
-
-require 'templates/users/new'
-
-
-#//////////////////////////////////
-#// Models
-#//////////////////////////////////
-
-require 'models/user'
-require 'models/session'
+require 'requireTemplates'
+require 'requireModels'
 
 #/////////////////////////////////
 #// Controllers

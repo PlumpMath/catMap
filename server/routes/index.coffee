@@ -8,3 +8,5 @@ module.exports = (app) ->
 
   app.post '/api/users', (req, res) ->
     console.log "new user: #{req.body.user.name}"
+    res.send 200
+
