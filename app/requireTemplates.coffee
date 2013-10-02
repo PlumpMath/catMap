@@ -8,6 +8,7 @@ module.exports = requireTemplates = ->
   require 'templates/_well'
   require 'templates/contact'
   require 'templates/landing'
+  require 'templates/loading'
 
   require 'templates/sessions/new'
   require 'templates/sessions/destroy'

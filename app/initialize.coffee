@@ -1,5 +1,7 @@
 window.App = require 'app'
 
+socket = io.connect 'http://localhost'
+
 require 'requireTemplates'
 require 'requireModels'
 
@@ -22,6 +24,7 @@ require 'views/index'
 
 require 'routes/application'
 require 'routes/usersNew'
+require 'routes/loading'
 
 #/////////////////////////////////
 #// Store

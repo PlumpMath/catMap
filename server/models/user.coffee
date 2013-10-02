@@ -3,11 +3,8 @@ passportLocalMongoose = require 'passport-local-mongoose'
 Schema = mongoose.Schema
 
 User = new Schema {
-  cats: [
-    {
-      id: String
-    }
-  ]
+  name: String
+  email: String
 }
 
 User.plugin passportLocalMongoose

@@ -1,5 +1,6 @@
 express = require 'express'
 flash = require 'connect-flash'
+http = require 'http'
 LocalStrategy = require('passport-local').Strategy
 passport = require 'passport'
 mongoose = require 'mongoose'
@@ -8,6 +9,13 @@ routes = require './routes'
 User = require './models/user'
 
 app = module.exports = express()
+server = http.createServer app
+
+io = require('socket.io').listen server
+
+io.sockets.on 'connection', (socket) ->
+  console.log 'connection established'
+
 mongoose.connect 'mongodb://catman:catman@ds047438.mongolab.com:47438/catmap', (err) ->
   if err
     console.log err
@@ -50,7 +58,6 @@ passport.deserializeUser (email, cb) ->
 require('./routes/index')(app)
 
 app.startServer = (port) ->
-  app.listen port, ->
+  server.listen port, ->
     console.log 'Express server started on port %d in %s mode',
       port, app.settings.env
-
