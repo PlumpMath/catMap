@@ -1,0 +1,62 @@
+.new-cat-container
+  padding-top: 3em
+  text-align: center
+
+.new-cat-header
+  border-bottom: 4px solid black
+  margin-bottom: 1em
+
+.new-cat-form
+  max-width: 700px
+  margin: 0 auto
+  padding: 2em
+  border: 8px solid black
+  border-radius: 10px
+  position: relative
+  margin-bottom: 2em
+
+  &:after
+    content: ''
+    height: 3.5em
+    width: 8px
+    background: black
+    position: absolute
+    right: 50%
+    top: -3.5em
+
+.form-header
+  padding-bottom: 1em
+
+.example-profile
+  position: relative
+  display: inline-block
+
+  .icon-arrow-down
+    position: absolute
+    font-size: 3em
+    right: -1.5em
+    top: 0.1em
+
+.cat-profile
+  max-width: 500px
+  margin: 2em auto
+  border: 8px solid black
+  padding: 2em
+  border-radius: 10px
+  margin-bottom: 1em
+  text-align: left
+
+  &.img-circle
+    .cat-img
+      border-radius: 50%
+
+  &.black-bg
+    background: #333
+    color: white
+
+.cat-img
+  width: 150px
+  height: 150px
+  background: #ccc
+  border: 8px solid #888
+  overflow: hidden
