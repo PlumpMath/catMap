@@ -1,0 +1,9 @@
+/ .all
+h1 all the cats
+
+.cats
+  ul.cats
+  each controller
+    li = name
+    li = description
+    li = location

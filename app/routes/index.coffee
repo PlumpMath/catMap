@@ -1,4 +1,2 @@
-App = requires 'app'
-
-module.exports = App.IndexRoute = Em.Route.extend
-  
+module.exports = App.IndexRoute = App.AuthenticatedRoute.extend
+  content: null

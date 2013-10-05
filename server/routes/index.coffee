@@ -1,35 +1,45 @@
-User = require '../models/user'
+Cat = require '../models/cat'
+
+mongoose = require 'mongoose'
 
 module.exports = (app) ->
-  app.get '*', (req, res, next) ->
-    if req.user
-      console.log 'WE HAVE A USER! - ' + req.user
-    else
-      console.log 'NO USER!'
-    next()
 
-  app.post '/api/users', (req, res) ->
-    console.log req.body
-    User.register new User({
-      username: req.body.user.username
-      name: req.body.user.name
-      email: req.body.user.email
-    }), 
-      req.body.user.password,
-      (err, account) ->
-        if err
-          console.log err
-          res.send 500
-        else
-          req.login account, (err) ->
-            if err
-              console.log err
-            
-            account.save (err) ->
-              if err
-                console.log "login error: #{err}"
-              else
-                console.log "registered: #{account}"
-                res.send 200
+  app.get '/api/cats', (req, res) ->
+    cats = Cat.find {}, (err, cats) ->
+      catMap = []
+      cats.forEach (cat) ->
+        catMap.push cat
 
- 
+      catHash = { cats: catMap }
+      console.log catHash
+      res.send catHash
+        
+
+  app.get '/api/cats/:id', (req, res) ->
+    Cat.findById req.params.id, (err, cat) ->
+      if err
+        console.log "Err retrieving cat"
+      else
+        res.send { cat: cat }
+
+  app.post '/api/cats', (req, res) ->
+    cat = req.body.cat
+    location = cat.location.split(' ')
+
+    newCat = new Cat {
+      name: cat.name
+      description: cat.description
+      picture: cat.picture
+      location: location
+      profileStyle: cat.profileStyle
+      created: cat.created
+    }
+
+    newCat.save (err) ->
+      if err
+        console.log "error creating new cat: #{err}"
+      else
+        console.log "#{newCat.name} created!"
+        console.log newCat.id
+        console.log { cat: newCat }
+        res.send { cat: newCat }

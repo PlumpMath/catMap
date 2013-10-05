@@ -6,15 +6,16 @@ passport = require 'passport'
 mongoose = require 'mongoose'
 MongoStore = require('connect-mongo')(express)
 routes = require './routes'
-User = require './models/user'
+Cat = require './models/cat'
 
 app = module.exports = express()
 server = http.createServer app
 
 io = require('socket.io').listen server
+passportSocketIo = require 'passport.socketio'
 
-io.sockets.on 'connection', (socket) ->
-  console.log 'connection established'
+io.on 'connection', (socket) ->
+  console.log "hello"
 
 mongoose.connect 'mongodb://catman:catman@ds047438.mongolab.com:47438/catmap', (err) ->
   if err
@@ -30,13 +31,7 @@ app.configure ->
   app.use express.bodyParser()
   app.use express.cookieParser 'catmaps are awesome'
   app.use express.methodOverride()
-  app.use express.session {
-    store: new MongoStore {
-      url: 'mongodb://catman:catman@ds047438.mongolab.com:47438/catmap'
-    }
-  }
   app.use passport.initialize()
-  app.use passport.session()
   app.use flash()
   app.use express.static __dirname + '/../public/'
   app.use app.router
@@ -48,12 +43,6 @@ app.configure 'development', ->
 
 app.configure 'production', ->
   app.use express.errorHandler()
-
-passport.use new LocalStrategy(User.authenticate())
-passport.serializeUser (user, cb) ->
-  cb null, user.email
-passport.deserializeUser (email, cb) ->
-  User.findByUsername email, cb
 
 require('./routes/index')(app)
 

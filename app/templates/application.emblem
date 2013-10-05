@@ -1,13 +1,15 @@
 /! application
 .container
   header.main-header
-    linkTo "index" classNames="logo" | CATMAP
+    linkTo 'index' classNames="logo" | CATMAP
     ul.main-nav
       li.main-nav-li
         linkTo "about" classNames="main-nav-a" | About
       li.main-nav-li
         linkTo "contact" classNames="main-nav-a" | Contact
       li.main-nav-li
-        linkTo "sessions.new" classNames="main-nav-a" | Login
+        linkTo "cats.new" classNames="main-nav-a" | Add a cat
+      li.main-nav-li
+        linkTo "cats.all" classNames="main-nav-a" | All the cats
 
   #page= outlet

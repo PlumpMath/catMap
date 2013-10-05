@@ -10,9 +10,9 @@ module.exports = requireTemplates = ->
   require 'templates/landing'
   require 'templates/loading'
 
-  require 'templates/sessions/new'
-  require 'templates/sessions/destroy'
-
-  require 'templates/users/new'
+  require 'templates/cats/new'
+  require 'templates/cats/show'
+  require 'templates/cats/all'
+  require 'templates/cats'
 
 requireTemplates()

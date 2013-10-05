@@ -13,7 +13,8 @@
     "bcrypt": "latest",
     "passport-local-mongoose": "latest",
     "connect-mongo": "latest",
-    "socket.io": "latest"
+    "socket.io": "latest",
+    "passport.socketio": "latest"
   },
   "devDependencies": {
   }

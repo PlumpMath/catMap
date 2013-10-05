@@ -1,0 +1,110 @@
+colorSky = #ABDDF5
+colorPink = #DBADCC
+colorGrun = #CCDBAD
+
+.about-section
+  width: 100%
+  height: 300px
+  position: relative
+  display: inline-block
+
+  &.profit
+    padding-top: 1em
+
+  &.half
+    width: 50%
+    float: left
+    border-bottom: 10px solid black
+
+    .about-hero
+      margin-left: 2em
+
+  &.left
+    background: colorPink
+
+    &:after
+      content: ''
+      height: 100%
+      width: 10px
+      position: absolute
+      right: 0
+      top: 0
+      background: black
+
+    .icon-arrow-right
+      top: 3em
+      right: 0.3em
+
+  &.right
+    background: colorGrun
+
+    .icon-arrow-down
+      bottom: 0em
+      right: 1.5em
+
+  &.sky
+    background: colorSky
+    border-bottom: 10px solid black
+
+    .icon-arrow-down
+      left: 5em
+      bottom: 0em
+
+  .icon-arrow-down, .icon-arrow-right
+    position: absolute
+    z-index: 20
+    color: black
+    font-size: 3em
+
+  .icon-cloud
+    color: white
+    position: absolute
+    opacity: 0.3
+
+    &.small
+      font-size: 10em
+    &.big
+      font-size: 17em
+    &.top-left
+      top: 0em
+      left: 1em
+    &.top-right
+      top: 0m
+      right: 0.5em
+
+.about-hero
+  margin: 2em auto
+  text-align: left
+  max-width: 800px
+  position: relative
+
+  &.profit
+    text-align: center
+
+  .hero-copy
+    padding-top: 2em
+    font-family: 'Bowlby One SC'
+    z-index: 5
+    position: relative
+
+  .hero-step
+    font-family: 'Bowlby One SC'
+    position: absolute
+    top: -0.2em
+    left: 0.1em
+    font-size: 4em
+
+@media screen and (max-width: 800px)
+  .about-section
+    .icon-arrow-down, .icon-arrow-right
+      display: none
+
+    &.sky
+      .about-hero
+        margin-left: 2em
+
+  .about-section.half
+    width: 100%
+
+    &:after
+      display: none

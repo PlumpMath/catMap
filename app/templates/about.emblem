@@ -1,3 +1,22 @@
-h2 About
-p Find me in <code>templates/about.emblem</code>
-partial 'well'
+.about-section.sky
+  span.icon-cloud.top-left.small
+  span.icon-cloud.top-right.big
+  span.icon-arrow-down
+  .about-hero
+    h1.hero-copy What exactly is CATMAPS? Well, let me tell you.
+
+.about-section.half.left
+  span.icon-arrow-right
+  .about-hero
+    h1.hero-step 1.
+    h1.hero-copy Add some cats
+
+.about-section.half.right
+  span.icon-arrow-down
+  .about-hero
+    h1.hero-step 2.
+    h1.hero-copy Look at those cats
+
+.about-section.profit
+  .about-hero.profit
+    h1.hero-copy $$$ PROFIT

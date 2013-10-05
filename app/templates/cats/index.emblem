@@ -1,0 +1,6 @@
+/ .cats/show
+h1 THE KITTY PAGE
+
+h2 = name
+h3 = description
+h3 = location

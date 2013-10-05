@@ -1,3 +1,12 @@
 / .login
+form submit="loginUser"
+  label for="username" Username
+  = input id="username" type="text" placeholder="Enter username" valueBinding="username"
+
+  label for="password" Password
+  = input id="password" type="password" placeholder="Enter password" valueBinding="password"
+
+  = input type="submit" value="Submit"
+
 #page
   linkTo "users.new" | Register instead?
