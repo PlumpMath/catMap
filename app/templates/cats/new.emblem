@@ -28,13 +28,8 @@
     span.icon-arrow-down
     
     .cat-profile class={profileStyle}
-      h3 Name
       h3 = name
-
-      h3 Location
       h3 = location
-
-      h3 Description
       p = description
 
       figure.cat-img
