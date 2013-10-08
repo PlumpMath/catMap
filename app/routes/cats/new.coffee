@@ -1,6 +1,10 @@
 module.exports = App.CatsNewRoute = Em.Route.extend
-  model: ->
-    @store.createRecord 'cat', {
-      created: new Date()
+  setupController: (controller, model) ->
+    controller.set 'content', {
+      name: ''
+      description: ''
+      picture: ''
+      place: ''
+      profileStyle: ''
+      created: ''
     }
-

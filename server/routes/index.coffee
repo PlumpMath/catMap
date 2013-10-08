@@ -24,13 +24,13 @@ module.exports = (app) ->
 
   app.post '/api/cats', (req, res) ->
     cat = req.body.cat
-    location = cat.location.split(' ')
+    location = cat.place.split(' ')
 
     newCat = new Cat {
       name: cat.name
       description: cat.description
       picture: cat.picture
-      location: location
+      place: location
       profileStyle: cat.profileStyle
       created: cat.created
     }

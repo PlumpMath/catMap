@@ -13,12 +13,14 @@ require 'controllers/application'
 require 'controllers/cats/new'
 require 'controllers/cats/show'
 require 'controllers/cats/all'
+require 'controllers/index'
 
 #/////////////////////////////////
 #// Views
 #/////////////////////////////////
 
 require 'views/index'
+require 'views/cats/new'
 
 #/////////////////////////////////
 #// Routes
@@ -29,6 +31,7 @@ require 'routes/loading'
 require 'routes/cats/new'
 require 'routes/cats/show'
 require 'routes/cats/all'
+require 'routes/index'
 
 #/////////////////////////////////
 #// Store
@@ -44,7 +47,7 @@ App.CatSerializer = DS.RESTSerializer.extend
       name: hash.name
       description: hash.description
       picture: hash.picture
-      location: hash.location.join ' '
+      place: hash.place.join ' '
       profileStyle: hash.profileStyle
       created: hash.created
 

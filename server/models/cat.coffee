@@ -3,7 +3,7 @@ Schema = mongoose.Schema
 
 Cat = new Schema {
   name: String
-  location: Array 
+  place: Array 
   description: String
   picture: String
   profileStyle: String

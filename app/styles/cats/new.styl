@@ -1,10 +1,14 @@
+lightPurple = #F4E6F5
+
 .new-cat-container
-  padding-top: 3em
   text-align: center
+  background: lightPurple
 
 .new-cat-header
+  padding-top: 1em
   border-bottom: 4px solid black
   margin-bottom: 1em
+  background: white
 
 .new-cat-form
   max-width: 700px
@@ -14,6 +18,7 @@
   border-radius: 10px
   position: relative
   margin-bottom: 2em
+  background: white
 
   &:after
     content: ''
@@ -23,6 +28,14 @@
     position: absolute
     right: 50%
     top: -3.5em
+
+  > fieldset
+    display: block
+    margin: 1em 0
+    text-align: left
+
+    label
+      display: block
 
 .form-header
   padding-bottom: 1em
@@ -45,6 +58,7 @@
   border-radius: 10px
   margin-bottom: 1em
   text-align: left
+  background: white
 
   &.img-circle
     .cat-img
@@ -61,3 +75,8 @@
   border: 8px solid #888
   overflow: hidden
   margin: 0 auto
+
+  > img
+    position: relative
+    right: 10px
+    bottom: 10px

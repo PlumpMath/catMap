@@ -4,4 +4,4 @@ h1 THE KITTY PAGE
 h2 click="goToCat" 
   = name
 h3 = description
-h3 = location
+h3 = place 

@@ -1,2 +1,3 @@
-module.exports = App.IndexRoute = App.AuthenticatedRoute.extend
-  content: null
+module.exports = App.IndexRoute = Ember.Route.extend
+  model: ->
+    @store.findAll 'cat'

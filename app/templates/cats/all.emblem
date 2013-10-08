@@ -2,8 +2,12 @@
 h1 all the cats
 
 .cats
-  ul.cats
   each controller
-    li = name
-    li = description
-    li = location
+    div class={:cat-profile profileStyle}
+      h3 = profileStyle
+      h3 = name
+      h3 = place
+      p = description
+
+      figure.cat-img
+        img src={picture}
