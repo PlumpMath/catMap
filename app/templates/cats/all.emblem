@@ -2,12 +2,13 @@
 h1 all the cats
 
 .cats
-  each controller
-    div class={:cat-profile profileStyle}
-      h3 = profileStyle
-      h3 = name
-      h3 = place
-      p = description
+  each cat in controller
+    linkTo "cats.show" cat
+      div class={:cat-profile cat.profileStyle}
+        h3 = cat.profileStyle
+        h3 = cat.name
+        h3 = cat.place
+        p = cat.description
 
-      figure.cat-img
-        img src={picture}
+        figure.cat-img
+          img src={cat.picture}
