@@ -3,11 +3,12 @@ module.exports = App.IndexView = EmberLeaflet.MapView.extend
 
   childLayers: [
     EmberLeaflet.DefaultTileLayer,
-    EmberLeaflet.MarkerCollectionLayer.extend
-      contentBinding: 'controller'
+    App.MarkerCollectionLayer
   ]
 
   center: L.latLng 36.1030, -115.0811
   zoom: 10
 
-  L.Icon.Default.imagePath = "/images"
+  init: ->
+    @_super()
+    L.Icon.Default.imagePath = "/images"

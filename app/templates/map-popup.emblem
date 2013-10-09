@@ -1,0 +1,10 @@
+/ .map-popup
+linkTo 'cats.show' this
+  div class={:cat-profile profileStyle}
+    h3 = profileStyle
+    h3 = name
+    h3 = place
+    p = description
+
+    figure.cat-img
+      img src=picture

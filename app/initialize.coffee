@@ -19,7 +19,11 @@ require 'controllers/index'
 #// Views
 #/////////////////////////////////
 
+require 'views/markerLayer'
+require 'views/markerCollectionLayer'
+require 'views/map-popup'
 require 'views/index'
+
 require 'views/cats/new'
 
 #/////////////////////////////////

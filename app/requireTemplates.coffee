@@ -15,4 +15,6 @@ module.exports = requireTemplates = ->
   require 'templates/cats/all'
   require 'templates/cats'
 
+  require 'templates/map-popup'
+
 requireTemplates()
