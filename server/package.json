@@ -14,7 +14,8 @@
     "passport-local-mongoose": "latest",
     "connect-mongo": "latest",
     "socket.io": "latest",
-    "passport.socketio": "latest"
+    "passport.socketio": "latest",
+    "xtend": "latest"
   },
   "devDependencies": {
   }
