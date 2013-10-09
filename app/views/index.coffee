@@ -12,7 +12,7 @@ module.exports = App.IndexView = EmberLeaflet.MapView.extend
         styleId: ->
           # change appearance of map based on time of day
           currentDate = new Date()
-          if currentDate.getHours() < 18
+          if currentDate.getHours() < 18 and currentDate.getHours() > 7
             return '110389'
           else
             return '110400'
