@@ -1,5 +1,5 @@
 / .contact
-.contact-container 
+.contact-container
   
   .contact
     h1 contact 
@@ -19,3 +19,6 @@
       .message 
         h3.fancy What do you want to tell us?
         textarea
+        img src='images/kitty.svg' class='kitty' alt='pretty kitty'
+          
+
