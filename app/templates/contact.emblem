@@ -1,2 +1,21 @@
 / .contact
-h1 contact
+.contact-container 
+  
+  .contact
+    h1 contact 
+ 
+  .lower-container
+    h2 say meow to us!
+
+  .container-box 
+
+    form.contact-form
+      .name 
+        h3.fancy What's your name?
+        input
+      .email 
+        h3.fancy What's your email?
+        input
+      .message 
+        h3.fancy What do you want to tell us?
+        textarea
