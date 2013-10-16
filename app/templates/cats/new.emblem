@@ -9,25 +9,25 @@
 
     fieldset
       label for="name" Name
-      = input id="name" type="text" placeholder="Enter the cat's name" valueBinding="name"
+      = input id="name" classNames="top-input" type="text" placeholder="Enter the cat's name" valueBinding="name"
 
     fieldset
       label for="place" Location
-      = input id="place" type="text" placeholder="Enter the cat's location" valueBinding="place"
+      = input id="place" classNames="top-input" type="text" placeholder="Enter the cat's location" valueBinding="place"
 
     fieldset
       label for="description" Description
-      = textarea id="description" valueBinding="description"
+      = textarea id="description" classNames="top-input" valueBinding="description"
 
     fieldset
       label for="picture" Picture
-      = input id="picture" type="text" placeholder="Enter url to cat picture" valueBinding="picture"
+      = input id="picture" classNames="top-input" type="text" placeholder="Enter url to cat picture" valueBinding="picture"
 
     fieldset
       label for="profileStyle" Profile Style
       = view Ember.Select classNames="chosen-input" id="profileStyle" contentBinding='styles' valueBinding="profileStyle"
 
-    = input type="submit" value="Submit"
+    = input type="submit" value="Submit" classNames="submit" 
 
   .example-profile
     h2 here's an example of the profile

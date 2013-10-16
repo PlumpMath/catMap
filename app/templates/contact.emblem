@@ -19,6 +19,6 @@
       .message 
         h3.fancy What do you want to tell us?
         textarea
-        img src='images/kitty.svg' class='kitty' alt='pretty kitty'
+        img src='images/kitty.png' class='kitty' alt='pretty kitty'
           
 
